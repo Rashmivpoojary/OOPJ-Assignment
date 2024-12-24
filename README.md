@@ -39,6 +39,7 @@ CREATE DATABASE food_ordering_system;
 USE food_ordering_system;
 
 -- Table for users
+
 CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(50) NOT NULL,
@@ -47,6 +48,7 @@ CREATE TABLE users (
 );
 
 -- Table for food items
+
 CREATE TABLE food_items (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
@@ -54,6 +56,7 @@ CREATE TABLE food_items (
 );
 
 -- Table for orders
+
 CREATE TABLE orders (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
@@ -62,6 +65,7 @@ CREATE TABLE orders (
 );
 
 -- Table for order details
+
 CREATE TABLE order_details (
     id INT AUTO_INCREMENT PRIMARY KEY,
     order_id INT NOT NULL,
@@ -75,11 +79,13 @@ CREATE TABLE order_details (
 Insert sample users and food items for testing:
 
 -- Sample admin and customer users
+
 INSERT INTO users (username, password, role) VALUES
 ('admin', 'admin', 'ADMIN'),
 ('user', 'user', 'CUSTOMER');
 
 -- Sample food items
+
 INSERT INTO food_items (name, price) VALUES
 ('Pizza', 8.99),
 ('Burger', 5.99),
@@ -142,14 +148,23 @@ Password: user
 Project Structure
 
 FoodOrderingSystem/
+
 ├── src/
+
 │   ├── main/
+
 │   │   ├── java/
+
 │   │   │   ├── org/example/
-│   │   │   │   ├── controller/         # Contains controllers for managing logic
-│   │   │   │   ├── database/           # Contains database connection and DAOs
-│   │   │   │   ├── model/              # Contains data models
-│   │   │   │   ├── view/               # Contains Swing-based GUI components
+
+│   │   │   │   ├── controller/ 
+                                         # Contains controllers for managing logic
+│   │   │   │   ├── database/ 
+                                          # Contains database connection and DAOs
+│   │   │   │   ├── model/  
+                                          # Contains data models
+│   │   │   │   ├── view/  
+                                         # Contains Swing-based GUI components
 │   ├── resources/
 │       └── application.properties      # Configuration file for database
 └── pom.xml                              # Maven build file
