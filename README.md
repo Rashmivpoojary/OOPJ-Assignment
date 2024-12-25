@@ -34,11 +34,16 @@ Database Setup
 
 Run the following SQL commands to set up the database:
 
+
+
 CREATE DATABASE food_ordering_system;
 
 USE food_ordering_system;
 
 -- Table for users
+
+
+
 
 CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -47,7 +52,10 @@ CREATE TABLE users (
     role ENUM('ADMIN', 'CUSTOMER') NOT NULL
 );
 
+
 -- Table for food items
+
+
 
 CREATE TABLE food_items (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -55,7 +63,11 @@ CREATE TABLE food_items (
     price DOUBLE NOT NULL
 );
 
+
+
 -- Table for orders
+
+
 
 CREATE TABLE orders (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -64,7 +76,12 @@ CREATE TABLE orders (
     FOREIGN KEY (user_id) REFERENCES users(id)
 );
 
+
+
 -- Table for order details
+
+
+
 
 CREATE TABLE order_details (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -80,17 +97,25 @@ Insert sample users and food items for testing:
 
 -- Sample admin and customer users
 
+
+
 INSERT INTO users (username, password, role) VALUES
 ('admin', 'admin', 'ADMIN'),
 ('user', 'user', 'CUSTOMER');
 
+
+
 -- Sample food items
+
+
 
 INSERT INTO food_items (name, price) VALUES
 ('Pizza', 8.99),
 ('Burger', 5.99),
 ('Pasta', 7.99),
 ('Coke', 1.99);
+
+
 
 How to Run the Project
 
@@ -147,7 +172,10 @@ Password: user
 
 Project Structure
 
+
+
 FoodOrderingSystem/
+
 
 ├── src/
 
@@ -185,6 +213,11 @@ https://github.com/Rashmivpoojary
 
 Other Contributors: 
             https://github.com/PriyaLakshmi21
-            https://github.com/SSharvariChatra15
 
-Demo link>>https://youtu.be/HNcq5V5D9eA?si=cf3SOiKEDbqxwaEp
+            
+           
+https://github.com/SSharvariChatra15
+
+Demo link>>
+
+https://youtu.be/HNcq5V5D9eA?si=cf3SOiKEDbqxwaEp
